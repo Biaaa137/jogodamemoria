@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("../img/fundo1.png");
+
+}
+img{
+    height: 100px;
+    width: 100px;
+    border-radius: 18px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(4,150px);
+    gap: 10px;
+    grid-template-areas: 'title title title'
+                         '. result .'
+                         'aside cartas content'
+                         'aside cartas content'       
+}
+.result{
+    border-radius: 10px;
+    background-color: #e9f4f6;
+    display: flex;
+    grid-area: result;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    padding: 10px;
+    font-size: 70px;
+    grid-area: title;
+    text-align: center;
+    color: #e9f4f6;
+}
+h2{
+    margin: 5%;
+    flex-direction: row;
+}
+.main{
+    position: relative;
+    grid-area: cartas;
+    display: flex;
+}
+.grid{
+    position: absolute;
+    padding: 10px;
+    justify-content: center;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
